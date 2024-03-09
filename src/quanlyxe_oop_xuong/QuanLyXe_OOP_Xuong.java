@@ -82,6 +82,31 @@ public class QuanLyXe_OOP_Xuong {
             }
         }
     }
+    // tim theo hang xe
+    public void timXeTheoHang(){
+        System.out.print("Nhap hang xe muon tim :");
+        String hang = sc.nextLine();
+        System.out.println("--------------- Thong tin xe muon tim ---------------");
+        for (Xe xe : listXe) {
+            listXe.indexOf(xe);
+            if(xe.getHangXe().equalsIgnoreCase(hang)){
+                xe.xuat();
+            }
+        }
+    }
+    // xoa theo hang xe
+        public void xoaXeTheoHang(){
+        System.out.print("Nhap hang xe muon xoa :");
+        String hang = sc.nextLine();
+        ArrayList<Xe> xeCungHang = new ArrayList<>();
+        for (Xe xe : listXe) {
+            if(hang.equalsIgnoreCase(xe.getHangXe())){
+                xeCungHang.add(xe);
+            }
+        }
+        listXe.removeAll(xeCungHang);
+        xuatThongTin();
+    }
     // xoa theo ma
     public void xoaXeTheoMa(){
         System.out.print("Nhap ma xe muon xoa :");
@@ -101,6 +126,7 @@ public class QuanLyXe_OOP_Xuong {
         for (Xe xe : listXe) {
             if(xe.getMaXe().equalsIgnoreCase(ma)){
                 System.out.println("------------ Cap nhat lai thong tin ------------");
+                xe.xuat();
                 xe.nhap();
                 xe.xuat();
             }

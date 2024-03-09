@@ -65,6 +65,12 @@ public class Program {
                 case 9:
                     quanLyXe.topGiaCao();
                     break;
+                case 10:
+                    quanLyXe.timXeTheoHang();
+                    break;
+                case 11:
+                    quanLyXe.xoaXeTheoHang();
+                    break;
                 case 0:
                     System.exit(0);
                 default:
@@ -85,6 +91,8 @@ public class Program {
         System.out.println("|7. Sap xep xe theo ten                    |");
         System.out.println("|8. Sap xep xe theo gia                    |");
         System.out.println("|9. Top 5 xe gia cao nhat                  |");
+        System.out.println("|10.Tim cac xe theo hang                   |");
+        System.out.println("|11.Xoa cac xe theo hang                   |");
         System.out.println("|0. Thoat                                  |");
         System.out.println("|==========================================|");
         System.out.print("Chon chuc nang : ");
